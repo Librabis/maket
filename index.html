@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style/style.css"> </head>
+
+<body>
+    <header>
+        <div class="top">
+            <div class="logo"><img src="img/Apple_logo_black.svg_.png" alt="logo"></div>
+            <div class="basket"><span class="price">Summ</span></div>
+        </div>
+        <nav id="menuList"></nav>
+    </header>
+    <script>
+        let menuList = document.querySelector('#menuList');
+        let menuItems = ['main', 'add item1', 'add item2', 'add item3', 'add item4'];
+
+        function getMenuItems(menuItems) {
+            menuItems.forEach(function (item) {
+                let menuItem = document.createElement("button");
+                menuList.insertAdjacentElement("beforeEnd", menuItem);
+                menuItem.insertAdjacentHTML("beforeEnd", item)
+            })
+        }
+        getMenuItems(menuItems)
+    </script>
+</body>
+
+</html>
